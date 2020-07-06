@@ -1,0 +1,38 @@
+<a routerLink='/home'><button id="btn">חזור לעמוד הבית</button></a>
+<div *ngIf='!testDone' class="row col-12">
+    <div class="question col-6">
+        <h2 style="color: #3F6C51">{{numberOfQuestion +1}} / {{questions.length}}</h2>
+    </div>
+    <div class="col-6">
+        <h2><span>{{minutes}} : {{seconds}}</span></h2>
+    </div>
+</div>
+<hr>
+<h1 *ngIf='!testDone'>{{title}}</h1>
+<div *ngIf='!testDone' id="testDiv">
+</div>
+<div *ngIf='testDone'>
+    <h1>תוצאת המבחן : <span *ngIf='resultOfTest' style="color: green;">עבר</span><span *ngIf='!resultOfTest'
+            style="color:red">נכשל</span></h1>
+            <h1>מספר טעויות : {{this.wrongQuestions.length}}</h1>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>תשובה נכונה</th>
+                <th>תשובה נבחרת</th>
+                <th>שאלה</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let o of wrongQuestions'>
+                <td>{{o.rightAnswer.data}}</td>
+                <td>{{o.userAnswer.data}}</td>
+                <td>
+                    {{o.name}}
+                    <br>
+                    <img *ngIf='o.img' [src]='o.img'>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

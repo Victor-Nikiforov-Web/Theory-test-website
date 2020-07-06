@@ -1,0 +1,38 @@
+img {
+    width: 200px!important;
+    height: 200px!important;
+    background-color: #2C3138;
+    border-radius: 100%;
+    border: 2px solid white;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+}
+
+.box{
+    margin: 10px;
+    position: relative;
+    text-align: center;
+}
+
+button{
+    background-color: #000000b0;
+    font-weight: 600;
+    border: none;
+    color: white;
+    width: 195px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 980px) {
+.boxes {
+    padding: 10px;
+}
+}

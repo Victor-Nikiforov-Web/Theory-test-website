@@ -1,0 +1,63 @@
+::ng-deep #signDiv img {
+    width: 300px!important;
+    margin: 10px;
+}
+
+::ng-deep div {
+    text-align: center!important;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+::ng-deep li {
+    background: #171D1C;
+    width: 30%;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 10px;
+    color: #eee;
+    position: relative;
+    transition: 1s;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    list-style: none;
+}
+
+::ng-deep li:hover {
+    background: #5E5E5E;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#btn {
+    background: #334a46;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 10px;
+    color: #eee;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 980px) {
+    ::ng-deep li {
+        width: 100%;
+    }
+    button{
+        margin: 10px;
+    }
+}
